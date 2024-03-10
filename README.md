@@ -1,16 +1,16 @@
 # TripSuitCase
 
-##Proje Tanımı : Bu proje ile seyahate çıkarken kendiniz arbanız be çocuğunuz için yanınıza almanız gerekenler ve yapılacaklar listesi hazırlayabilirsiniz böylece unutmamanız gereken şeyleri unutmazsınız.
+## Proje Tanımı : Bu proje ile seyahate çıkarken kendiniz arbanız be çocuğunuz için yanınıza almanız gerekenler ve yapılacaklar listesi hazırlayabilirsiniz böylece unutmamanız gereken şeyleri unutmazsınız.
 
-##Proje Kategorisi : Mobil seyahat Uygulaması
+## Proje Kategorisi : Mobil seyahat Uygulaması
 
-##Referans Uygulama : [SirtimdaNevar](https://github.com/Yukselcsgn/SirtimdaNeVar)
+## Referans Uygulama : [SirtimdaNevar](https://github.com/Yukselcsgn/SirtimdaNeVar)
 
-##Uygulama Adresi : [TripSuitCase](https://github.com/Yukselcsgn/TripSuitCase)
+## Uygulama Adresi : [TripSuitCase](https://github.com/Yukselcsgn/TripSuitCase)
 
-##Grup Adı : PANDAS
+## Grup Adı : PANDAS
 
-##Proke Ekibi : Yüksel COŞGUN
+## Proje Ekibi : Yüksel COŞGUN
 
 ### 1. Kayıt olma
 ### 2. Giriş yapma
