@@ -12,6 +12,8 @@
 
 ### Proje Ekibi : Yüksel COŞGUN
 
+### Proje Planı : [Plan](https://github.com/Yukselcsgn/TripSuitCase/blob/main/Pandas%20Plan.png)
+
 #### 1. Kayıt olma
 #### 2. Giriş yapma
 #### 3. İhtiyaç kategorilerinin 
