@@ -12,6 +12,12 @@
 
 ### Proje Ekibi : Yüksel COŞGUN
 
+### Proje Gereksinim Açıklamaları: [Gereksinim](https://github.com/Yukselcsgn/TripSuitCase/blob/main/Pandas-Gereksinim_Detay.pdf)
+
+### Proje Use Case : [UseCase](https://github.com/Yukselcsgn/TripSuitCase/blob/main/Pandas-UseCase.pdf)
+
+### Proje Veritabanı Diyagramı: [VT Diagram](https://github.com/Yukselcsgn/TripSuitCase/blob/main/pandas_db_diagram.png)
+
 ### Proje Planı : [Plan](https://github.com/Yukselcsgn/TripSuitCase/blob/main/Pandas%20Plan.png)
 
 #### 1. Kayıt olma
