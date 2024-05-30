@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private void addAddTitles(){
         titles = new ArrayList<>(  );
-        titles.add(MyConstants.BABY_NEEDS_CAMEL_CASE);
+        titles.add(MyConstants.BASIC_NEEDS_CAMEL_CASE);
         titles.add(MyConstants.CLOTHING_CAMEL_CASE);
         titles.add(MyConstants.PERSONAL_CARE_CAMEL_CASE);
         titles.add(MyConstants.BABY_NEEDS_CAMEL_CASE);

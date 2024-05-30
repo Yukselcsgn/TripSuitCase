@@ -1,10 +1,9 @@
 package com.computer.tripsuitcase;
 
-
-
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -20,6 +19,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
@@ -34,8 +34,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-
-//FRONT END SORUNLARI
 public class CheckList extends AppCompatActivity {
 
     RecyclerView recyclerView;
@@ -84,14 +82,17 @@ public class CheckList extends AppCompatActivity {
         return true;
     }
 
-
-
     @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         Intent intent = new Intent( this,CheckList.class );
         AppData appData = new AppData(database,this);
 
+        if(item.getItemId()==R.id.btnTripPlan){
+            intent = new Intent( this,TripPlanActivity.class );
+            startActivity(intent);
+
+        }
         if(item.getItemId()==R.id.btnMySelections){
             intent.putExtra(MyConstants.HEADER_SMALL,MyConstants.MY_SELECTIONS);
             intent.putExtra(MyConstants.SHOW_SMALL,MyConstants.FALSE_STRING);
@@ -138,63 +139,6 @@ public class CheckList extends AppCompatActivity {
             this.finishAffinity();
             Toast.makeText(this, "Pack your Bag \n Exit completed", Toast.LENGTH_SHORT).show( );
         }
-
-
-        /*switch (item.getItemId()){
-            case R.id.btnMySelections:
-                intent.putExtra(MyConstants.HEADER_SMALL,MyConstants.MY_SELECTIONS);
-                intent.putExtra(MyConstants.SHOW_SMALL,MyConstants.FALSE_STRING);
-                startActivityForResult(intent,101);
-                return true;
-
-            case R.id.btnCustomList:
-                intent.putExtra(MyConstants.HEADER_SMALL,MyConstants.MY_LIST_CAMEL_CASE);
-                intent.putExtra(MyConstants.SHOW_SMALL,MyConstants.TRUE_STRING);
-                startActivity(intent);
-                return true;//calismazsa bunu sil
-
-            case R.id.btnDeleteDefault:
-                new AlertDialog.Builder(this)
-                        .setTitle("Delete Default Data")
-                        .setMessage("Are you sure?\n\nAs this will delete the data provided by(Pack your back) while installing")
-                        .setPositiveButton("Confirm", (dialogInterface, i) -> {
-                            appData.persistDataByCategory(header,true);
-                            itemsList = database.mainDao().getAll(header);
-                            updateRecycler(itemsList);
-                        }).setNegativeButton("Cancel", (dialogInterface, i) -> {
-
-                        }).setIcon(R.drawable.ic_alert)
-                        .show();
-                return true;
-
-            case R.id.btnReset:
-                new AlertDialog.Builder(this)
-                        .setTitle("Reset to Default")
-                        .setMessage("Are you sure?\n\nAs this will load the default data provided by (Pack your bag) " +
-                                "and will delete the custom data you have added in")
-                        .setPositiveButton("Confirm", (dialogInterface, i) -> {
-                            appData.persistDataByCategory(header,false);
-                            itemsList = database.mainDao().getAll(header);
-                            updateRecycler(itemsList);
-                        }).setNegativeButton("Confirm", (dialogInterface, i) -> {
-
-                        }).setIcon(R.drawable.ic_alert)
-                        .show();
-                return true;
-
-            case R.id.btnAboutUs:
-                intent = new Intent( this,AboutUs.class );
-                startActivity(intent);
-                return true;
-
-            case R.id.btnExit:
-                this.finishAffinity();
-                Toast.makeText(this, "Pack your Bag \n Exit completed", Toast.LENGTH_SHORT).show( );
-                return true;
-
-            default:
-                return super.onOptionsItemSelected(item);
-        }*/
         return super.onOptionsItemSelected(item);
     }
 
@@ -207,21 +151,26 @@ public class CheckList extends AppCompatActivity {
         }
     }
 
+    private Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_check_list);
-        ActionBar actionBar = getSupportActionBar();
+
+        toolbar=findViewById(R.id.toolbar);
+
+        setSupportActionBar(toolbar);//toolbar ı tanıtma kodu
+
+/*        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setCustomView(R.menu.menu_one);
+            actionBar.setDisplayShowCustomEnabled(true);
+        }*/
         Intent intent= getIntent();
         header=intent.getStringExtra(MyConstants.HEADER_SMALL);
         show=intent.getStringExtra(MyConstants.SHOW_SMALL);
-
-        if (actionBar != null) {
-            Objects.requireNonNull(actionBar).setDisplayHomeAsUpEnabled(true);
-            actionBar.setTitle(header);
-        }
-
-
+//        getSupportActionBar().setTitle(header);
 
         txtAdd=findViewById(R.id.txtAdd);
         btnAdd=findViewById(R.id.btnAdd);
