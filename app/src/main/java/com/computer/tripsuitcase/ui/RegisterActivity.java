@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.computer.tripsuitcase.R;
 import com.computer.tripsuitcase.ui.login.LoginActivity;
@@ -13,6 +14,7 @@ import com.computer.tripsuitcase.ui.login.LoginActivity;
 public class RegisterActivity extends AppCompatActivity {
 
     public TextView signInLink;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
