@@ -1,5 +1,6 @@
 package com.computer.tripsuitcase;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -25,11 +26,16 @@ public class TripPlanActivity extends AppCompatActivity {
         btnTrip = findViewById(R.id.btnTripPlan);
         textTrip = findViewById(R.id.textTrip);
 
-        btnTrip.setOnClickListener(new View.OnClickListener() {
+        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
-            public void onClick(View v) {
-                calendarView.getDateTextAppearance();
-
+            public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
+                btnTrip.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {;
+                        String date = dayOfMonth + "/" + (month+1) +"/" + year;
+                        textTrip.setText("Bir sonraki seyahatiniz : "+date);
+                    }
+                });
             }
         });
 
