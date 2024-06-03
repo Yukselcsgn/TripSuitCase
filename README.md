@@ -81,7 +81,7 @@
 
         notificationManager.notify(12345, notificationBuilder.build());
     }`
-
+<img src="https://github.com/Yukselcsgn/TripSuitCase/assets/31345859/f06ff672-b359-49c4-830a-81365efb023e" alt="alt text" width="320" height="180">
 
 ![WhatsApp Image 2024-06-03 at 18 06 05](https://github.com/Yukselcsgn/TripSuitCase/assets/31345859/f06ff672-b359-49c4-830a-81365efb023e)
 
