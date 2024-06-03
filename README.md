@@ -18,7 +18,7 @@
 
 ### Proje Veritabanı Diyagramı: [VT Diagram](https://github.com/Yukselcsgn/TripSuitCase/blob/main/pandas_db_diagram.png)
 
-### Geliştirici Ve Kullanıcı Dökümantasyonu : [Dökünatasyon](https://app.gitbook.com/invite/5JRb7QNQXi9pnk9DR7I1/3CepyzkhYzaFvEx5TFxv)
+### Geliştirici Ve Kullanıcı Dökümantasyonu : [Dökümantasyon](https://app.gitbook.com/invite/5JRb7QNQXi9pnk9DR7I1/3CepyzkhYzaFvEx5TFxv)
 
 ### Proje Planı : [Plan](https://github.com/Yukselcsgn/TripSuitCase/blob/main/Pandas%20Plan.png)
 
