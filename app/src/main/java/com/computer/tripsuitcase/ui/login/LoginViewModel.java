@@ -1,15 +1,15 @@
 package com.computer.tripsuitcase.ui.login;
 
+import android.util.Patterns;
+
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import android.util.Patterns;
-
+import com.computer.tripsuitcase.R;
 import com.computer.tripsuitcase.data.LoginRepository;
 import com.computer.tripsuitcase.data.Result;
 import com.computer.tripsuitcase.data.model.LoggedInUser;
-import com.computer.tripsuitcase.R;
 
 public class LoginViewModel extends ViewModel {
 

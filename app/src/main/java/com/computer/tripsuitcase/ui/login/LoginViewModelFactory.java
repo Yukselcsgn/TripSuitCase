@@ -1,8 +1,8 @@
 package com.computer.tripsuitcase.ui.login;
 
+import androidx.annotation.NonNull;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.annotation.NonNull;
 
 import com.computer.tripsuitcase.data.LoginDataSource;
 import com.computer.tripsuitcase.data.LoginRepository;

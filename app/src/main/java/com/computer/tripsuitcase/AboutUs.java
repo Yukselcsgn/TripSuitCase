@@ -23,9 +23,6 @@ public class AboutUs extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
 
-        //Objects.requireNonNull(getSupportActionBar( )).setDisplayHomeAsUpEnabled(true);
-        //getSupportActionBar().setTitle("About Us");
-
         imgLinkedin = findViewById(R.id.imgLinkedin);
         imgInstagram = findViewById(R.id.imgInstagram);
         imgTwitter = findViewById(R.id.imgTwitter);
@@ -37,7 +34,7 @@ public class AboutUs extends AppCompatActivity {
         txtEmail.setOnClickListener(view -> {
             try {
                 Intent intent = new Intent( Intent.ACTION_VIEW,Uri.parse("mailto: "+"yukselcosgun1@gmail.com") );
-                intent.putExtra(Intent.EXTRA_SUBJECT,"From Sırtımda Ne Var");
+                intent.putExtra(Intent.EXTRA_SUBJECT,"From Trip Suit Case");
                 startActivity(intent);
             }catch (ActivityNotFoundException e ){
                 System.out.println( e );
