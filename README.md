@@ -61,6 +61,27 @@
 ## Firebase-Messaging-Service(FCM)
 ### Service paketinin içerisinde bulunan TripNotificationService sınıfı ile bu servisi kullanarak kullanıcılara bildirim gönderiyoruz.TripPlanActivity ile seyahet terihi seçildiğinde bu tarih firestore-database içerisine kaydedilir ve düzenli olarak kaç gün kaldığı hesaplanarak seyahat günü yaklaştığında bu TripNotificationService sınıfı aracılığı ile bu servis kullanılarak kullanıcılara bildirim gönderilir.
 
+`public void sendNotification(String title, String message) {
+
+        NotificationChannel channel = null;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            channel = new NotificationChannel("TripNotification", "Trip Notifications", NotificationManager.IMPORTANCE_HIGH);
+        }
+        NotificationManager notificationManager = getSystemService(NotificationManager.class);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            notificationManager.createNotificationChannel(channel);
+        }
+
+        NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this, "TripNotification");
+        notificationBuilder.setSmallIcon(R.drawable.app_icon_two);
+        notificationBuilder.setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.app_icon_two));
+        notificationBuilder.setContentTitle(title);
+        notificationBuilder.setContentText(message);
+        notificationBuilder.setPriority(NotificationCompat.PRIORITY_HIGH);
+
+        notificationManager.notify(12345, notificationBuilder.build());
+    }`
+
 
 ![WhatsApp Image 2024-06-03 at 18 06 05](https://github.com/Yukselcsgn/TripSuitCase/assets/31345859/f06ff672-b359-49c4-830a-81365efb023e)
 
