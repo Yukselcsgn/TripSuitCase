@@ -37,29 +37,29 @@
 #### 15. Unutulan şeyleri hatırlatmak için telefona bildirim gönderilmesi
 #### 16. Her sayfanın ayarlar bölümü
 
-###Seyahete giderken yardımcı olacak size unuttuklarınızı hatırlatacak bir uygulama. Kendi listenizi internete bağlanma gereği duymadan düzenleyebilir ekleyip çıkartabilir ve yanınıza aldıklarınızı işaretleyebilirsiniz.
+### Seyahete giderken yardımcı olacak size unuttuklarınızı hatırlatacak bir uygulama. Kendi listenizi internete bağlanma gereği duymadan düzenleyebilir ekleyip çıkartabilir ve yanınıza aldıklarınızı işaretleyebilirsiniz.
 
-###Login Ekranı : Bu ekranda giriş yapabilirsiniz
-###Register Ekranı : Eğre üyeliğiniz yyoksa üye olabilirsiniz.
-###Kategoriler : İhtiyacınız olan kategoriler listelenir.
-###CheckList Ekranı : Her kategorinin kendine ait bir cheklist ekranı bulunmaktadır.
-###TripPlan  : Bir sonraki seyahatinizin tarihini seçebilirsiniz ve seyahat yaklaştığında size bildirim gönderir.
+### Login Ekranı : Bu ekranda giriş yapabilirsiniz
+### Register Ekranı : Eğre üyeliğiniz yyoksa üye olabilirsiniz.
+### Kategoriler : İhtiyacınız olan kategoriler listelenir.
+### CheckList Ekranı : Her kategorinin kendine ait bir cheklist ekranı bulunmaktadır.
+### TripPlan  : Bir sonraki seyahatinizin tarihini seçebilirsiniz ve seyahat yaklaştığında size bildirim gönderir.
 
-#Kullanılan Teknolojiler 
-##Room Kütüphanesi:
-###Verileri internete gerek duymadan düzenleyebilmek için lokal bir şekilde telefonda tutmaya yarayan bir local veritabanı kütüphanesidir.
+# Kullanılan Teknolojiler 
+## Room Kütüphanesi:
+### Verileri internete gerek duymadan düzenleyebilmek için lokal bir şekilde telefonda tutmaya yarayan bir local veritabanı kütüphanesidir.
 
-##Firebase-Authantication
-###Farklı giriş seçenekleri hakkında yardım sağlayan bir kütüphanedir. Google, Facebook ve mail aracılığıyla giriş yaparken oluşan kod karmaşasını ortadan kaldırır ve yazılımcıya yardımcı olur.
+## Firebase-Authantication
+### Farklı giriş seçenekleri hakkında yardım sağlayan bir kütüphanedir. Google, Facebook ve mail aracılığıyla giriş yaparken oluşan kod karmaşasını ortadan kaldırır ve yazılımcıya yardımcı olur.
 
-##Firebase-FireStore-Database
-###No-Sql bir veritabanıdır. Uygulamada kullanıcıların yapacağı seyahetleri burada tutuyoruz.
+## Firebase-FireStore-Database
+### No-Sql bir veritabanıdır. Uygulamada kullanıcıların yapacağı seyahetleri burada tutuyoruz.
 
-##Firebase-RealTime Database
-###Kullanıcı verilerini anlık olarak tutmak ve anlık olarak güncelleyebilmek için kullanıyoruz. Kayıt yapan kullanıcıların verileri anlık olarak buraya düşmektedir.
+## Firebase-RealTime Database
+### Kullanıcı verilerini anlık olarak tutmak ve anlık olarak güncelleyebilmek için kullanıyoruz. Kayıt yapan kullanıcıların verileri anlık olarak buraya düşmektedir.
 
-##Firebase-Messaging-Service(FCM)
-###Service paketinin içerisinde bulunan TripNotificationService sınıfı ile bu servisi kullanarak kullanıcılara bildirim gönderiyoruz.TripPlanActivity ile seyahet terihi seçildiğinde bu tarih firestore-database içerisine kaydedilir ve düzenli olarak kaç gün kaldığı hesaplanarak seyahat günü yaklaştığında bu TripNotificationService sınıfı aracılığı ile bu servis kullanılarak kullanıcılara bildirim gönderilir.
+## Firebase-Messaging-Service(FCM)
+### Service paketinin içerisinde bulunan TripNotificationService sınıfı ile bu servisi kullanarak kullanıcılara bildirim gönderiyoruz.TripPlanActivity ile seyahet terihi seçildiğinde bu tarih firestore-database içerisine kaydedilir ve düzenli olarak kaç gün kaldığı hesaplanarak seyahat günü yaklaştığında bu TripNotificationService sınıfı aracılığı ile bu servis kullanılarak kullanıcılara bildirim gönderilir.
 
 
 ![WhatsApp Image 2024-06-03 at 18 06 05](https://github.com/Yukselcsgn/TripSuitCase/assets/31345859/f06ff672-b359-49c4-830a-81365efb023e)
